@@ -1,12 +1,73 @@
-# React + Vite
+# Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app to search for movies using an external API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search movies by title
+- View detailed information about selected movies
+- Responsive design
+- Google OAuth login (optional)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+git clone https://github.com/ineshass/movie-search-app.git
+
+2.Go into the project folder:
+
+cd movie-search-app
+
+3.Install dependencies:
+
+npm install
+
+4.Create a .env file in the root folder and add your API keys or environment variables:
+
+REACT_APP_API_KEY=your_api_key_here
+
+5.Start the app locally:
+
+npm start
+
+## Usage
+Open the app in your browser or the port you're using.
+
+Use the search bar to find movies.
+
+Click on a movie to see more details.
+
+## Notes
+
+Make sure .env is included in .gitignore to avoid pushing sensitive data.
+
+If Google login doesn’t work, open your Google Cloud Console:
+
+Go to APIs & Services > Credentials.
+
+Select your OAuth 2.0 Client ID.
+
+Under Authorized JavaScript origins, add your local address (e.g., http://localhost:5173).
+
+Save the changes and refresh your app.
+
+## Technologies Used
+React
+
+JavaScript
+
+CSS
+
+[API you use, e.g., OMDb API]
+
+
+
+
+
+
+
+
+
+
+
