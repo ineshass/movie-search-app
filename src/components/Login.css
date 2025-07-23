@@ -1,0 +1,196 @@
+.body {
+  height: 100vh;
+  width: 100%;
+  background-image: url('/src/assets/backgrnd login 1.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.login-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.68);
+  padding: 2rem 1.5rem;
+  max-width: 692px;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.87rem;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  width: 100%;
+  height: 100%;
+  padding: 0 3.12rem 0 3.12rem; /* Space for icons on both sides */
+  border-radius: 0.32rem;
+  background-color: #333;
+  border: 1px solid #8c8c8c;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: #8c8c8c;
+}
+
+/* Left icon (email or lock) */
+.input-wrapper i:not(.eye-icon) {
+  position: absolute;
+  top: 50%;
+  left: 0.9rem;
+  transform: translateY(-50%);
+  color: #F9F8FF;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+/* Eye icon */
+.input-wrapper .eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: #F9F8FF;
+  cursor: pointer;
+  display: none;
+}
+
+/* Show eye icon only when input is not empty */
+.input-wrapper .input-field:valid ~ .eye-icon {
+  display: block;
+}
+
+/* Focus effects */
+.input-field:focus {
+  border-color: #e50914;
+}
+
+.input-field:focus ~ i:not(.eye-icon) {
+  color: #e50914;
+}
+
+.forgot-pass-link {
+  display: block;
+  color: #8c8c8c;
+  font-size: 0.875rem;
+  text-align: right;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-pass-link:hover {
+  color: #e50914;
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  height: 54px;
+  margin-top: 2.19rem;
+  background: #e50914;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.125rem;
+  color: #F9F8FF;
+  font-weight: 500;
+  border-radius: 0.31rem;
+  border: none;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.login-button:hover {
+  background: #bd030c;
+}
+
+.social-login {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.31rem;
+  border: 1px solid #F9F8FF;
+  background: #F9F8FF;
+  font-weight: 500;
+  color: black;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.social-button:hover {
+  background: rgba(128, 128, 128, 0.5);
+  color: white;
+  border-color: #F9F8FF;
+}
+
+.social-icon {
+  width: 23px;
+  margin-left: 8px;
+}
+
+.signup-txt {
+  text-align: center;
+  font-weight: 500;
+  margin: 1.75rem 0 0.31rem;
+  color: white;
+}
+
+.signup-txt a {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: 500;
+  transition: text-decoration 0.2s ease;
+}
+
+.signup-txt a:hover {
+  text-decoration: underline;
+}

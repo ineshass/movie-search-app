@@ -1,0 +1,245 @@
+.welcome {
+  background-color: #c30606;         /* Dark gray, lighter than black */
+  color: #ffffff;                 /* Netflix red */
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 320px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(149, 0, 7, 0.4);
+  animation: fadeOut 0.5s ease-in-out forwards;
+  animation-delay: 2.5s;
+  cursor: default;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+}
+
+/* Background & font */
+.home {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+  min-height: 100vh;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #141414;
+  padding: 0 20px;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+
+/* Search container */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50px;
+  padding: 6px 12px;
+  width: 48px;
+  transition: width 0.35s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.search-container.open {
+  width: 280px;
+  cursor: auto;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  flex: 1;
+  min-width: 0;
+  user-select: text;
+  caret-color: #e50914;
+}
+
+/* Hide input text when search bar is closed */
+.search-container:not(.open) .search-input {
+  width: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Show input text when open */
+.search-container.open .search-input {
+  opacity: 1;
+  padding-left: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  letter-spacing: 1px;
+}
+
+.logout-btn:hover {
+  background-color: #a6040c;
+}
+
+
+
+.logo img {
+  height: 100px;          /* Set a fixed height to keep it consistent */
+  width: auto;           /* Maintain aspect ratio */
+  display: block;        /* Remove inline image space */
+  user-select: none;     /* Prevent image selection */
+  cursor: pointer;       /* Make it look clickable */
+}
+
+/*movies*/
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.movie-card button {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;       /* full viewport height */
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;    /* allow vertical scrolling on overlay */
+  padding: 20px;       /* some space around modal */
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+   max-height: 80vh;    /* limit height to 80% of viewport */
+  overflow-y: auto;    /* enable scrolling inside modal content */
+  position: relative;
+  color: white;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.modal-content p {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Error */
+.error {
+  color: #e50914;
+  text-align: center;
+  margin-top: 10px;
+}
